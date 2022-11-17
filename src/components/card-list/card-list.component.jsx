@@ -3,10 +3,10 @@ import { Card } from '../card/card.component';
 
 import './card-list.styles.css';
 
-export const CardList = props => {
+export const CardList = filteredMonsters => {
    return <div className='card-list'>
     {
-      props.monsters.map(monsters => <Card key={monsters.id} monsters={monsters} />)
+      filteredMonsters.monsters.map(monsters => <Card key={monsters.id} monsters={monsters} />)
     }
    </div>;
 };
